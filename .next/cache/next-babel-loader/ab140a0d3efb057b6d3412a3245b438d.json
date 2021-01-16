@@ -1,0 +1,1 @@
+{"ast":null,"code":"const ErrorPage = () => {};\n\nexport default ErrorPage;","map":{"version":3,"sources":["/Users/mary/Documents/personalsite/pages/404.js"],"names":["ErrorPage"],"mappings":"AAAA,MAAMA,SAAS,GAAG,MAAM,CAEvB,CAFD;;AAIA,eAAeA,SAAf","sourcesContent":["const ErrorPage = () => {\n\n}\n\nexport default ErrorPage;\n"]},"metadata":{},"sourceType":"module"}

@@ -1,0 +1,157 @@
+.projectPageContainer {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  margin: auto;
+  margin-top: 2em;
+}
+
+.filterTagContainer {
+  min-width: 240px;
+  max-width: 240px;
+  padding-right: 20px;
+  margin-left: 2em;
+}
+
+.filterOrder {
+  width: 50%;
+  font-family: 'IBM Plex Mono', monospace;
+  letter-spacing: 1.5px;
+  background-color: transparent;
+  border: solid 1px white;
+  color: white;
+  padding: 2px 6px;
+  font-size: 12px;
+  outline: none;
+}
+
+.filterOrder:hover {
+  cursor: pointer;
+}
+
+.clearButton {
+  font-family: 'IBM Plex Mono', monospace;
+  letter-spacing: 1.5px;
+  font-size: 10px;
+  background-color: transparent;
+  outline: none;
+  border: none;
+  color: white;
+  width: 50%;
+}
+
+.clearButton:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.filterTitle {
+  font-family: 'Josefin Sans', sans-serif;
+  letter-spacing: 2px;
+  font-size: 26px;
+  margin: 12px 0px;
+}
+
+/*project*/
+.projectsContainer {
+  max-width: 600px;
+}
+
+.topBar {
+  height: 10px;
+  background: rgb(2,0,36);
+  background: linear-gradient(112deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(58,129,143,1) 100%);
+  border-top: solid 1px white;
+  border-left: solid 1px white;
+  border-right: solid 1px #2B2B48;
+}
+
+.projectNameContainer {
+  margin-bottom: 10px;
+}
+
+.projectName {
+  font-family: 'Josefin Sans', sans-serif;
+  letter-spacing: 2px;
+  font-size: 24px;
+  color: #0e19a9;
+}
+
+.projectName:hover {
+  color: blue;
+}
+
+.projectYear{
+  color: grey;
+  font-family: 'IBM Plex Mono', monospace;
+}
+
+.projectDesc{
+  font-family: 'IBM Plex Mono', monospace;
+  letter-spacing: 1px;
+  font-size: 12px;
+}
+
+.projectTextContainer {
+  display:flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  margin: 12px 0px;
+  padding-right: 12px;
+}
+
+.projectContainer{
+  color: black;
+  background: #bdbdca;
+  border-left: solid 1px white;
+  border-right: solid 1px #2B2B48;
+  border-bottom: solid 2px #2B2B48;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 10px;
+  margin-bottom: 10px;
+  box-shadow: 4px 4px #5f6d6d;
+}
+
+.previewImage {
+  height: 160px;
+}
+/*end of project*/
+/*filter buttons*/
+.filterButton {
+  font-size: 20px;
+  font-family: 'IBM Plex Mono', monospace;
+  letter-spacing: 2.5px;
+  min-width: 10%;
+  margin: 3px;
+  border: none;
+}
+
+.filterButton:hover {
+  cursor: pointer;
+  background-color: #2811a9;
+  color: white;
+}
+
+.filterButton:focus {
+  border: none;
+  outline: none;
+}
+
+.removeIcon {
+  margin-left: 4px;
+  font-size: 14px;
+  border: solid 1px black;
+}
+
+.toggled {
+  background-color: #a0a6bb;
+  color: #213640;
+}
+
+.untoggled {
+  background-color: transparent;
+  color: white;
+}
+/*end of filter buttons*/

@@ -1,0 +1,62 @@
+.navContainer{
+  background: black;
+  position: fixed;
+  top: 1em;
+  width: 100vw;
+  text-align: center;
+}
+
+/*top controls*/
+.galleryControls {
+  font-family: 'IBM Plex Mono', monospace;
+  width: 100vw;
+  top: 10vh;
+  padding-bottom: 1em;
+  position: fixed;
+  z-index: 3;
+  background: black;
+  display: flex;
+  justify-content: space-around;
+}
+
+.select {
+  font-family: 'IBM Plex Mono', monospace;
+  letter-spacing: 1.5px;
+  background-color: transparent;
+  border: solid 1px white;
+  color: white;
+  padding: 2px 6px;
+  font-size: 12px;
+  outline: none;
+}
+
+.select:hover {
+  cursor: pointer;
+}
+
+.large {
+  height: 1200px;
+  width: 2px;
+  background: blue;
+}
+
+/*container for images*/
+.imageContainer {
+  margin-top: 17vh;
+  display: flex;
+  height: 70vh;
+}
+
+.imageContainer img{
+  background: white;
+  padding: 1em 1em;
+}
+
+.arrow {
+  margin-right: 24px;
+}
+
+.arrow:hover {
+  cursor: pointer;
+  color: #4fffe8;
+}
