@@ -1,7 +1,8 @@
 {
     "scripts": {
         "dev": "next",
-        "build": "next build && next export"
+        "build": "next build && next export",
+        "export": "next build && next export"
     },
     "dependencies": {
         "next": "^10.0.4",

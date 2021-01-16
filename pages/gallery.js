@@ -108,17 +108,16 @@ const art = [vaporwave, collages, sketches]
 
 const Gallery = () => {
   const router = useRouter()
-  const [idx, setIdx] = useState(parseInt(router.query.filter))
+  //const [idx, setIdx] = useState(parseInt(router.query.filter))
+  const [imgs, setImgs] = useState(art[parseInt(router.query.filter)])
   const [hoverL, setHoverLeft] = useState(false)
   const [hoverR, setHoverRight] = useState(false)
 
   const changeArtwork = () => {
     let projIdx = document.getElementById('selectProject').value
     document.getElementById('selectProject').value = projIdx;
-    setIdx(parseInt(projIdx));
+    setImgs(art[parseInt(projIdx)]);
   }
-
-
 
   const hoverLeft = (cond) => {
     setHoverLeft(cond);
@@ -146,7 +145,7 @@ const Gallery = () => {
     });
   }
 
-  //allow scroll on hover 
+  //allow scroll on hover
   useEffect(() => {
     const interval = setInterval(() => {
       let scrollPos = window.scrollX;
@@ -196,18 +195,22 @@ const Gallery = () => {
       </div>
 
       <div className={styles.imageContainer}>
-        {art[idx].map((item, i) => {
-          return (
-            <LoadImage key={`art-item${i}`}  smallImgSrc={item.smallImg} largeImgSrc={item.img} />
-          )
-        })}
+      { imgs != undefined ?
+          imgs.map((item, i) => {
+            return (
+              <LoadImage key={`art-item${i}`}  smallImgSrc={item.smallImg} largeImgSrc={item.img} />
+            )
+          })
+          : <div></div>
+      }
+
       </div>
     </div>
   )
 }
 
-Gallery.getInitialProps = async ({query}) => {
-  return { query : query }
+Gallery.getInitialProps = async (ctx) => {
+  return { query : ctx.query }
 }
 
 export default Gallery;
