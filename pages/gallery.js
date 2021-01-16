@@ -108,14 +108,17 @@ const art = [vaporwave, collages, sketches]
 
 const Gallery = () => {
   const router = useRouter()
-  const [idx, setIdx] = useState(0)
+  const [idx, setIdx] = useState(parseInt(router.query.filter))
   const [hoverL, setHoverLeft] = useState(false)
   const [hoverR, setHoverRight] = useState(false)
 
   const changeArtwork = () => {
     let projIdx = document.getElementById('selectProject').value
-    setIdx(projIdx);
+    document.getElementById('selectProject').value = projIdx;
+    setIdx(parseInt(projIdx));
   }
+
+
 
   const hoverLeft = (cond) => {
     setHoverLeft(cond);
@@ -143,6 +146,7 @@ const Gallery = () => {
     });
   }
 
+  //allow scroll on hover 
   useEffect(() => {
     const interval = setInterval(() => {
       let scrollPos = window.scrollX;
@@ -154,6 +158,11 @@ const Gallery = () => {
     }, 25);
     return () => clearInterval(interval);
   }, [hoverL, hoverR]);
+
+  //initially set the correct dropdown value
+  useEffect(() => {
+    document.getElementById('selectProject').value = router.query.filter;
+  }, []);
 
   return (
     <div>
@@ -195,6 +204,10 @@ const Gallery = () => {
       </div>
     </div>
   )
+}
+
+Gallery.getInitialProps = async ({query}) => {
+  return { query : query }
 }
 
 export default Gallery;

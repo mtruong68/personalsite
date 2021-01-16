@@ -1,10 +1,7 @@
 {
-  "/404": "pages/404.html",
   "/_app": "pages/_app.js",
   "/_document": "pages/_document.js",
-  "/gallery": "pages/gallery.html",
-  "/": "pages/index.html",
+  "/_error": "pages/_error.js",
   "/projects": "pages/projects.js",
-  "/projects/publications": "pages/projects/publications.html",
-  "/_error": "pages/_error.js"
+  "/gallery": "pages/gallery.js"
 }

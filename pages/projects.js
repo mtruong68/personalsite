@@ -32,7 +32,7 @@ const allProjects = [{
     alt: "collage",
     tags: ["art"],
     mary: '4',
-    link: "/gallery"
+    link: {internal: true, href:"/gallery", query: {filter: "1"}}
   },{
     name: "ICT VR Research",
     year: "2019",
@@ -41,7 +41,7 @@ const allProjects = [{
     smallImage: "https://res.cloudinary.com/dftvewldz/image/upload/c_scale,h_25/v1609780336/games/make-it-neat-preview.gif",
     tags: ["code", "research", "game"],
     mary: '2',
-    link: "https://www.youtube.com/watch?v=Dvz5tDsmNiM&feature=youtu.be"
+    link: {internal: false, href:"https://www.youtube.com/watch?v=Dvz5tDsmNiM&feature=youtu.be"}
   },{
     name: "Art-Discontent",
     year: "2020",
@@ -50,7 +50,7 @@ const allProjects = [{
     smallImage: "https://res.cloudinary.com/dftvewldz/image/upload/c_scale,h_25/v1609866701/previews/art-discontent-preview.gif",
     tags: ["art", "code", "writing"],
     mary: '1',
-    link: "https://art-discontent.com/"
+    link: {internal: false, href:"https://art-discontent.com/"}
   },{
     name: "Off the Record",
     year: "2020",
@@ -59,7 +59,7 @@ const allProjects = [{
     smallImage: "https://res.cloudinary.com/dftvewldz/image/upload/c_scale,h_25/v1609866836/off-the-record-preview.png",
     tags: ["freelance", "games", "code"],
     mary: '2',
-    link: "https://studyhall.xyz/off-the-record/"
+    link: {internal: false, href:"https://studyhall.xyz/off-the-record/"}
   },{
     name: "Vaporsquare",
     year: "2018",
@@ -68,7 +68,7 @@ const allProjects = [{
     smallImage: "https://res.cloudinary.com/dftvewldz/image/upload/c_scale,h_25/v1535237063/vaporsquare/cmr2.gif",
     tags: ["art"],
     mary: '1',
-    link: "/gallery"
+    link: {internal: true, href:"/gallery", query: {filter: "0"}}
   },{
     name: "Publications",
     year: "2020",
@@ -77,7 +77,7 @@ const allProjects = [{
     smallImage: "https://res.cloudinary.com/dftvewldz/image/upload/c_scale,h_25/v1610603060/publicationsPreview.png",
     tags: ["art", "writing"],
     mary: '3',
-    link: "/projects/publications"
+    link: {internal: true, href:"/projects/publications", query: {}}
   },{
     name: "Alexa, the Acousmatic Voice",
     year: "2020",
@@ -86,7 +86,7 @@ const allProjects = [{
     smallImage: "https://res.cloudinary.com/dftvewldz/image/upload/c_scale,h_25/v1609867855/games/acousmaticalexa.png",
     tags: ["art", "writing", "code"],
     mary: '5',
-    link: "https://acousmatic-alexa.glitch.me/"
+    link: {internal: false, href:"https://acousmatic-alexa.glitch.me/"}
   },{
     name: "Vaporwave, the Eclectic Aesthetic about Time",
     year: "2019",
@@ -95,7 +95,7 @@ const allProjects = [{
     smallImage: "https://res.cloudinary.com/dftvewldz/image/upload/c_scale,h_25/v1580524622/games/vaporwavegen.png",
     tags: ["art", "writing", "code"],
     mary: '3',
-    link: "https://vaporwave-generator.glitch.me/"
+    link: {internal: false, href:"https://vaporwave-generator.glitch.me/"}
 }];
 
 const tags = ["art", "code", "freelance", "research", "games", "vr/ar", "writing"];
@@ -251,9 +251,14 @@ const Art = () => {
                <div className={styles.projectContainer}>
                  <div className={styles.projectTextContainer}>
                  <div className={styles.projectNameContainer}>
-                  { project.link[0] === '/'
-                    ? <ProjectLink className={styles.projectName} href={project.link}>{project.name}</ProjectLink>
-                    : <a className={styles.projectName} href={project.link} target="_blank">{project.name}</a>
+                  { project.link.internal
+                    ? <ProjectLink
+                        className={styles.projectName}
+                        href={{pathname: project.link.href, query: project.link.query}}
+                      >
+                        {project.name}
+                      </ProjectLink>
+                    : <a className={styles.projectName} href={project.link.href} target="_blank">{project.name}</a>
                   }
                    <span className={styles.projectYear}>  {project.year}</span>
                  </div>
