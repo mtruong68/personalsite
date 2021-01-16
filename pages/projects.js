@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { useRouter } from "next/router"
 
-import Link from 'next/Link'
+import Link from 'next/link'
 import LoadImage from '../components/LoadingImage.js'
 import Navigation from '../components/Navigation.js'
 import styles from './projects.module.css'

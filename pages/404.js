@@ -1,4 +1,4 @@
-import Link from 'next/Link'
+import Link from 'next/link'
 import styles from './404.module.css'
 import styled from 'styled-components'
 
