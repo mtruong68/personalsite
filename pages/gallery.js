@@ -106,10 +106,18 @@ const sketches = [{
 
 const art = [vaporwave, collages, sketches]
 
+function initIdx(idx){
+  if (idx){
+    return art[idx]
+  } else {
+    return art[0]
+  }
+}
+
 const Gallery = () => {
   const router = useRouter()
   //const [idx, setIdx] = useState(parseInt(router.query.filter))
-  const [imgs, setImgs] = useState(art[parseInt(router.query.filter)])
+  const [imgs, setImgs] = useState(initIdx(router.query.filter))
   const [hoverL, setHoverLeft] = useState(false)
   const [hoverR, setHoverRight] = useState(false)
 
@@ -195,14 +203,13 @@ const Gallery = () => {
       </div>
 
       <div className={styles.imageContainer}>
-      { imgs != undefined ?
+        {
           imgs.map((item, i) => {
             return (
               <LoadImage key={`art-item${i}`}  smallImgSrc={item.smallImg} largeImgSrc={item.img} />
             )
           })
-          : <div></div>
-      }
+        }
 
       </div>
     </div>
@@ -210,7 +217,13 @@ const Gallery = () => {
 }
 
 Gallery.getInitialProps = async (ctx) => {
-  return { query : ctx.query }
+  let x;
+  if (ctx.query) {
+    x = ctx.query
+  } else {
+    x = 0
+  }
+  return { query : x }
 }
 
 export default Gallery;
