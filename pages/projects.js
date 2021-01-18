@@ -199,10 +199,10 @@ const Art = () => {
 
       <div className={styles.projectPageContainer}>
 
+      <div>
+      <div className={styles.filterTitle}>Filter Projects</div>
       <div className={styles.filterTagContainer}>
-        <div className={styles.filterTitle}>Filter Projects</div>
-
-        <div style={{margin:`12px 0px`, position:'relative'}}>
+        <div className={styles.filterControls}>
         <select className={styles.filterOrder} id="filterOrder" onChange={() => filterOrder()}>
             <option value="year_desc">Year ▼</option>
             <option value="year_asc">Year ▲</option>
@@ -210,7 +210,7 @@ const Art = () => {
         </select>
         <button className={styles.clearButton} onClick={() => clearFilters()}>Clear Filters</button>
         </div>
-
+        <div className={styles.filterTags}>
         {tags.map((tag, i) => {
            return(
              <button
@@ -225,7 +225,9 @@ const Art = () => {
              </button>
            )
          })}
+         </div>
         </div>
+      </div>
 
         <div className={styles.projectsContainer}>
 
@@ -266,9 +268,9 @@ const Art = () => {
                  {project.desc}
                  </div>
                </div>
-               <div className={styles.previewImage}>
-                <LoadImage largeImgSrc={project.image} smallImgSrc={project.smallImage} alt={project.alt} />
-               </div>
+
+                <LoadImage largeImgSrc={project.image} className={styles.projectImg} smallImgSrc={project.smallImage} alt={project.alt} />
+            
                </div>
              </div>
 

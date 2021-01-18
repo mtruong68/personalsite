@@ -125,3 +125,28 @@
 .hidden {
   display: none;
 }
+
+.widthWarning {
+  display: none;
+}
+
+@media(max-width: 950px) {
+  .book {
+    display: none;
+  }
+
+  .widthWarning {
+    display: block;
+    text-align: center;
+    margin: auto;
+    max-width: 600px;
+    margin-top: 20px;
+
+  }
+
+  .widthWarning img {
+    margin-top: 20px;
+    height: 200px;
+  }
+
+}

@@ -31,7 +31,7 @@ class Index extends React.Component {
   componentDidMount() {
     document.addEventListener('scroll', this.scrollHandler);
     console.log(`(●´∀｀）ノ♡ hi!! thank u for visiting my site. you can see the code here:
-http://marytruong.com`);
+https://github.com/mtruong68/personalsite`);
   }
 
   componentWillUnmount() {

@@ -34,12 +34,6 @@
   cursor: pointer;
 }
 
-.large {
-  height: 1200px;
-  width: 2px;
-  background: blue;
-}
-
 /*container for images*/
 .imageContainer {
   margin-top: 17vh;
@@ -59,4 +53,46 @@
 .arrow:hover {
   cursor: pointer;
   color: #4fffe8;
+}
+
+@media(max-width: 640px) {
+  .imageContainer {
+    flex-direction: column;
+    margin-top: 12px;
+  }
+
+  .imageContainer img{
+    background: transparent;
+  }
+
+  .navContainer{
+    position: relative;
+    top: 0;
+    margin: 12px 0px;
+  }
+
+  .galleryControls {
+    padding-bottom: 0em;
+    top: 0;
+    position: relative;
+  }
+
+  .arrow {
+    display: none;
+  }
+
+  .x img{
+    background: transparent;
+    height: inherit;
+    width: 100%;
+    padding: 0px;
+
+  }
+
+  .x {
+    width: auto;
+    height: auto;
+    margin: 6px 8px;
+  }
+
 }

@@ -455,6 +455,14 @@ class Publications extends React.Component {
         </div>
       </div>
 
+      <div className={styles.widthWarning}>
+      <div>
+        Sorry!! This page is best viewed on a wider screen!
+        Try looking at it on desktop or widen your browser window!
+      </div>
+        <img className={styles.errorImage} src="https://res.cloudinary.com/dftvewldz/image/upload/v1610068685/cryingcat.jpg" />
+      </div>
+
       <div className={styles.book}>
         <div id="leftarrow" className={styles.arrow} onClick={() => this.turnLeft()}>
           <span className="material-icons">

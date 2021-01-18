@@ -29,6 +29,11 @@
   cursor: pointer;
 }
 
+.filterControls {
+  margin: 12px 0px;
+  position: relative;
+}
+
 .clearButton {
   font-family: 'IBM Plex Mono', monospace;
   letter-spacing: 1.5px;
@@ -49,7 +54,7 @@
   font-family: 'Josefin Sans', sans-serif;
   letter-spacing: 2px;
   font-size: 26px;
-  margin: 12px 0px;
+  margin: 12px 1em;
 }
 
 /*project*/
@@ -90,6 +95,10 @@
   font-family: 'IBM Plex Mono', monospace;
   letter-spacing: 1px;
   font-size: 12px;
+}
+
+.projectImg {
+  height: 160px;
 }
 
 .projectTextContainer {
@@ -155,3 +164,88 @@
   color: white;
 }
 /*end of filter buttons*/
+
+@media(max-width: 900px) {
+  .projectsContainer {
+    margin-left: 12px;
+    width: 95%;
+  }
+
+  .projectPageContainer {
+    display: flex;
+    flex-direction: column;
+    margin-top: 0em;
+    align-items: center;
+  }
+
+  .filterTitle {
+    margin-left: 12px;
+  }
+
+  .filterTagContainer {
+    max-width: 100%;
+    display: flex;
+    margin: 0px;
+    padding: 0px 12px 8px 8px;
+  }
+
+  .filterControls {
+    display: flex;
+    flex-direction: column;
+    width: 160px;
+    margin: 0px;
+    margin-right: 12px;
+  }
+
+  .filterOrder{
+    width: 100%;
+  }
+
+  .clearButton{
+    width: 100%;
+    margin-top: 8px;
+  }
+
+  .filterButton {
+    font-size: 15px;
+  }
+}
+
+@media(max-width: 575px) {
+  .projectsContainer {
+    margin-left: 0px;
+  }
+
+  .projectName {
+    font-size: 18px;
+    letter-spacing: normal;
+  }
+
+  .projectDesc {
+    letter-spacing: 0px;
+    font-size: 12px;
+  }
+
+  .projectYear {
+    font-size: 14px;
+  }
+
+  .filterButton {
+    font-size: 11px;
+  }
+
+  .projectImg {
+    height: auto;
+    width: 90%;
+  }
+
+  .projectImg img{
+    width: 100%;
+  }
+
+  .projectContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}

@@ -194,6 +194,7 @@ font-family: 'Major Mono Display', monospace;
   display: table;
   padding: 20px 0px 4px 0px;
   margin: auto;
+  margin-top: 10px;
 }
 
 .squiggleWrapper {
@@ -261,4 +262,55 @@ font-family: 'Major Mono Display', monospace;
 
 .resume a:hover {
   color: #32fdff;
+}
+
+@media(max-width: 640px) {
+  .squiggleOuterWrapper {
+    margin: auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+
+  .squiggle {
+    width: 12vh;
+  }
+
+  .arrow {
+    display: none;
+  }
+
+  .bioContainer {
+    max-width: 90vw;
+    margin: auto;
+  }
+
+  .bioText {
+    padding: 12px 8px;
+    font-size: 12px;
+    line-height: 1.2em;
+  }
+
+  .resume {
+    margin: auto;
+    width: 90vw;
+  }
+
+  .resumeHead {
+    font-size: 14px;
+  }
+
+  .resumePoint {
+    font-size: 12px;
+    margin-bottom: 10px;
+  }
+
+  .resumeDate {
+    color: darkgrey;
+    font-size: 12px;
+  }
+
+  .resumeTitle {
+    font-size: 12px;
+    color: #a9b6de;
+  }
 }

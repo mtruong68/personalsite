@@ -108,23 +108,22 @@ const art = [vaporwave, collages, sketches]
 
 function initIdx(idx){
   if (idx){
-    return art[idx]
+    return idx
   } else {
-    return art[0]
+    return 0
   }
 }
 
 const Gallery = () => {
   const router = useRouter()
-  //const [idx, setIdx] = useState(parseInt(router.query.filter))
-  const [imgs, setImgs] = useState(initIdx(router.query.filter))
+  const [idx, setIdx] = useState(parseInt(initIdx(router.query.filter)))
   const [hoverL, setHoverLeft] = useState(false)
   const [hoverR, setHoverRight] = useState(false)
 
   const changeArtwork = () => {
     let projIdx = document.getElementById('selectProject').value
     document.getElementById('selectProject').value = projIdx;
-    setImgs(art[parseInt(projIdx)]);
+    setIdx(parseInt(projIdx));
   }
 
   const hoverLeft = (cond) => {
@@ -168,7 +167,7 @@ const Gallery = () => {
 
   //initially set the correct dropdown value
   useEffect(() => {
-    document.getElementById('selectProject').value = router.query.filter;
+    document.getElementById('selectProject').value = initIdx(router.query.filter);
   }, []);
 
   return (
@@ -204,9 +203,9 @@ const Gallery = () => {
 
       <div className={styles.imageContainer}>
         {
-          imgs.map((item, i) => {
+          art[idx].map((item, i) => {
             return (
-              <LoadImage key={`art-item${i}`}  smallImgSrc={item.smallImg} largeImgSrc={item.img} />
+              <LoadImage key={`art-item${i}`}  className={styles.x} smallImgSrc={item.smallImg} largeImgSrc={item.img} />
             )
           })
         }
