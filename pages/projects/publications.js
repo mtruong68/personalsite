@@ -1,6 +1,7 @@
 import React from 'react'
 import GenericLink from '../../components/GenericLink.js'
 import Navigation from '../../components/Navigation.js'
+import Head from 'next/head'
 
 import styles from './publications.module.css'
 
@@ -436,7 +437,12 @@ class Publications extends React.Component {
   render(){
     return (
       <div className={styles.publicationsContainer}>
-
+      <Head>
+        <title>Publications</title>
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+        <meta name="description" content="Mary Truong is an artist, coder, and writer. Her site documents various things she makes." />
+        <link rel="canonical" href="http://marytruong.com/projects/publications" />
+      </Head>
       <div className={"navContainer"}>
         <Navigation/>
       </div>

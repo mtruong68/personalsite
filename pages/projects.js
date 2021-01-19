@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { useRouter } from "next/router"
 
 import Link from 'next/link'
+import Head from 'next/head'
 import LoadImage from '../components/LoadingImage.js'
 import Navigation from '../components/Navigation.js'
 import styles from './projects.module.css'
@@ -193,6 +194,12 @@ const Art = () => {
 
   return (
     <div>
+      <Head>
+        <title>Projects</title>
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+        <meta name="description" content="Mary Truong is an artist, coder, and writer. Her site documents various things she makes." />
+        <link rel="canonical" href="http://marytruong.com/projects" />
+      </Head>
       <div className={"navContainer"}>
         <Navigation/>
       </div>
@@ -270,7 +277,7 @@ const Art = () => {
                </div>
 
                 <LoadImage largeImgSrc={project.image} className={styles.projectImg} smallImgSrc={project.smallImage} alt={project.alt} />
-            
+
                </div>
              </div>
 
