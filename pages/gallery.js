@@ -177,7 +177,7 @@ const Gallery = () => {
         <title>marytruong.com</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
         <meta name="description" content="Mary Truong is an artist, coder, and writer. Her site documents various things she makes." />
-        <link rel="canonical" href="http://marytruong.com/gallery" />
+        <link rel="canonical" href="https://marytruong.com/gallery" />
       </Head>
 
       <div className={styles.navContainer}>

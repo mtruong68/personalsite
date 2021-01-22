@@ -198,7 +198,7 @@ const Art = () => {
         <title>Projects</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
         <meta name="description" content="Mary Truong is an artist, coder, and writer. Her site documents various things she makes." />
-        <link rel="canonical" href="http://marytruong.com/projects" />
+        <link rel="canonical" href="https://marytruong.com/projects" />
       </Head>
       <div className={"navContainer"}>
         <Navigation/>

@@ -72,7 +72,7 @@ https://github.com/mtruong68/personalsite`);
           <title>marytruong.com</title>
           <meta name="viewport" content="initial-scale=1.0, width=device-width" />
           <meta name="description" content="Mary Truong is an artist, coder, and writer. Her site documents various things she makes." />
-          <link rel="canonical" href="http://marytruong.com" />
+          <link rel="canonical" href="https://marytruong.com" />
         </Head>
   			<div className={styles.navigation}>
   			</div>
