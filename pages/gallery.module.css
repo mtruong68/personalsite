@@ -38,11 +38,12 @@
 .imageContainer {
   margin-top: 17vh;
   display: flex;
-  height: 70vh;
+  align-items: flex-start;
 }
 
 .imageContainer img{
   background: white;
+  height: 70vh;
   padding: 1em 1em;
 }
 
@@ -81,18 +82,16 @@
     display: none;
   }
 
-  .x img{
-    background: transparent;
-    height: inherit;
-    width: 100%;
-    padding: 0px;
-
+  .imageContainer img{
+    height: auto;
+    padding: 0;
   }
 
   .x {
-    width: auto;
+    width: 90vw;
     height: auto;
-    margin: 6px 8px;
+    margin: auto;
+    margin-bottom: 12px;
   }
 
 }

@@ -1,25 +1,34 @@
 import React, { useState, useEffect } from 'react'
-import styles from './LoadingImage.module.css'
 
 const LoadImage = (props) => {
+  /*
+    code adapted form https://benhoneywill.com/progressive-image-loading-with-react-hooks/
+  */
   const [blur, setBlur] = React.useState(true);
   const loadingImage = React.useRef();
+  const [src, setSrc] = React.useState(props.smallImgSrc);
 
   React.useEffect(() => {
-    if (loadingImage.current.complete) {
-      setBlur(false);
-    }
-
-    loadingImage.current.addEventListener('load', () => {
-      setBlur(false);
-    });
-  }, []);
+      setSrc(props.smallImgSrc);
+      const img = new Image();
+      img.src = props.largeImgSrc;
+      img.onload = () => {
+        setSrc(props.largeImgSrc);
+        setBlur(false)
+      };
+    },
+    [props.smallImgSrc, props.largeImgSrc]
+  );
 
   return (
-    <div className={`${styles.image_container} ${props.className} ${blur ? styles.blur : styles.unblur}`}>
-      <img className={styles.placeholder_image} src={props.smallImgSrc} alt={props.alt}/>
-      <img className={styles.real_image} ref={loadingImage} src={props.largeImgSrc} alt={props.alt}/>
-    </div>
+    <img
+      className={props.className}
+      src={src}
+      style={{
+        filter: blur ? "blur(20px)" : "none",
+        transition: blur ? "none" : "filter 0.3s ease-out"
+      }}
+      alt={props.alt}/>
   )
 }
 
