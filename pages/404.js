@@ -19,7 +19,7 @@ const ErrorPage = () => {
         <title>ERERROEORO</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
         <meta name="description" content="Mary Truong is an artist, coder, and writer. Her site documents various things she makes." />
-        <link rel="canonical" href="http://marytruong.com/projects" />
+        <link rel="canonical" href="https://marytruong.com/" />
       </Head>
       <div className={styles.title}>404 ERROR!</div>
       <img className={styles.errorImage} src="https://res.cloudinary.com/dftvewldz/image/upload/v1610068685/cryingcat.jpg" />
