@@ -1,3 +1,6 @@
+@use '_globals.scss';
+@import "_globals.scss";
+
 .projectPageContainer {
   display: flex;
   flex-direction: row;
@@ -14,19 +17,7 @@
 }
 
 .filterOrder {
-  width: 50%;
-  font-family: 'IBM Plex Mono', monospace;
-  letter-spacing: 1.5px;
-  background-color: transparent;
-  border: solid 1px white;
-  color: white;
-  padding: 2px 6px;
-  font-size: 12px;
-  outline: none;
-}
-
-.filterOrder:hover {
-  cursor: pointer;
+  @extend %dropdown;
 }
 
 .filterControls {
@@ -64,69 +55,69 @@
 
 .topBar {
   height: 10px;
-  background: rgb(2,0,36);
-  background: linear-gradient(112deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(58,129,143,1) 100%);
+  @include linear-gradient-background(rgb(2,0,36),
+  (112deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(58,129,143,1) 100%));
   border-top: solid 1px white;
   border-left: solid 1px white;
   border-right: solid 1px #2B2B48;
 }
 
-.projectNameContainer {
-  margin-bottom: 10px;
-}
-
-.projectName {
-  font-family: 'Josefin Sans', sans-serif;
-  letter-spacing: 2px;
-  font-size: 24px;
-  color: #0e19a9;
-}
-
-.projectName:hover {
-  color: blue;
-}
-
-.projectYear{
-  color: grey;
-  font-family: 'IBM Plex Mono', monospace;
-}
-
-.projectDesc{
-  font-family: 'IBM Plex Mono', monospace;
-  letter-spacing: 1px;
-  font-size: 12px;
-}
-
-.projectImg {
-  height: 160px;
-}
-
-.projectTextContainer {
-  display:flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  margin: 12px 0px;
-  padding-right: 12px;
-}
-
 .projectContainer{
   color: black;
-  background: #bdbdca;
-  border-left: solid 1px white;
-  border-right: solid 1px #2B2B48;
-  border-bottom: solid 2px #2B2B48;
+  @extend %box-border;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   padding: 10px;
   margin-bottom: 10px;
-  box-shadow: 4px 4px #5f6d6d;
+
+  .projectNameContainer {
+    margin-bottom: 10px;
+  }
+
+  .projectName {
+    font-family: 'Josefin Sans', sans-serif;
+    letter-spacing: 2px;
+    font-size: 24px;
+    color: #0e19a9;
+  }
+
+  .projectName:hover {
+    color: blue;
+  }
+
+  .projectYear{
+    color: grey;
+    font-family: 'IBM Plex Mono', monospace;
+  }
+
+  .projectDesc{
+    font-family: 'IBM Plex Mono', monospace;
+    letter-spacing: 1px;
+    font-size: 12px;
+  }
+
+  .projectImg {
+    height: 160px;
+  }
+
+  .projectTextContainer {
+    display:flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    margin: 12px 0px;
+    padding-right: 12px;
+  }
+
+  .previewImage {
+    height: 160px;
+  }
 }
 
-.previewImage {
-  height: 160px;
-}
+
+
 /*end of project*/
+
 /*filter buttons*/
 .filterButton {
   font-size: 20px;
@@ -212,40 +203,32 @@
 }
 
 @media(max-width: 575px) {
-  .projectsContainer {
-    margin-left: 0px;
-  }
-
-  .projectName {
-    font-size: 18px;
-    letter-spacing: normal;
-  }
-
-  .projectDesc {
-    letter-spacing: 0px;
-    font-size: 12px;
-  }
-
-  .projectYear {
-    font-size: 14px;
-  }
-
   .filterButton {
     font-size: 11px;
   }
 
-  .projectImg {
-    height: auto;
-    width: 90%;
-  }
-
-  .projectImg img{
-    width: 100%;
-  }
-
-  .projectContainer{
+  .projectContainer {
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    .projectsContainer {
+      margin-left: 0px;
+    }
+
+    .projectName {
+      font-size: 18px;
+      letter-spacing: normal;
+    }
+
+    .projectDesc {
+      letter-spacing: 0px;
+      font-size: 12px;
+    }
+
+    .projectYear {
+      font-size: 14px;
+    }
+
   }
 }

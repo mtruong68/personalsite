@@ -1,0 +1,37 @@
+%box-border {
+  border-left: solid 1px white;
+  border-right: solid 1px #2B2B48;
+  border-bottom: solid 2px #2B2B48;
+  background: #bdbdca;
+  box-shadow: 4px 4px #5f6d6d;
+}
+
+%full-box-border {
+  border-left: solid 1px white;
+  border-top: solid 1px white;
+  border-right: solid 1px black;
+  border-bottom: solid 1px black;
+}
+
+%dropdown {
+  width: 50%;
+  font-family: 'IBM Plex Mono', monospace;
+  letter-spacing: 1.5px;
+  background-color: transparent;
+  border: solid 1px white;
+  color: white;
+  padding: 2px 6px;
+  font-size: 12px;
+  outline: none;
+}
+
+%dropdown:hover {
+  cursor: pointer;
+}
+
+@mixin linear-gradient-background($default, $gradient){
+  background: $default;
+  background: -moz-linear-gradient($gradient);
+  background: -webkit-linear-gradient($gradient);
+  background: linear-gradient($gradient);
+}

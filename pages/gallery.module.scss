@@ -1,3 +1,6 @@
+@use '_globals.scss';
+@import "_globals.scss";
+
 .navContainer{
   background: black;
   position: fixed;
@@ -20,19 +23,10 @@
 }
 
 .select {
-  font-family: 'IBM Plex Mono', monospace;
-  letter-spacing: 1.5px;
-  background-color: transparent;
-  border: solid 1px white;
-  color: white;
-  padding: 2px 6px;
-  font-size: 12px;
-  outline: none;
+  @extend %dropdown;
+  width: 140px;
 }
 
-.select:hover {
-  cursor: pointer;
-}
 
 /*container for images*/
 .imageContainer {

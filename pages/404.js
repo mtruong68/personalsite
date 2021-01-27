@@ -1,7 +1,8 @@
 import Link from 'next/link'
-import styles from './404.module.css'
+import styles from './404.module.scss'
 import styled from 'styled-components'
 import Head from 'next/head'
+
 
 const Link404 = styled.a`
   color: white;

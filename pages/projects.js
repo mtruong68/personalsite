@@ -5,7 +5,7 @@ import Link from 'next/link'
 import Head from 'next/head'
 import LoadImage from '../components/LoadingImage.js'
 import Navigation from '../components/Navigation.js'
-import styles from './projects.module.css'
+import styles from './projects.module.scss'
 import styled from 'styled-components'
 
 const Temp3Link = ({ as, children, className, href }) => (

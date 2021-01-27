@@ -5,7 +5,7 @@ import GenericLink from '../components/GenericLink.js'
 import Navigation from '../components/Navigation.js'
 import Head from 'next/head'
 
-import styles from './gallery.module.css'
+import styles from './gallery.module.scss'
 
 const vaporwave = [{
     img: "https://res.cloudinary.com/dftvewldz/image/upload/v1536242517/vaporsquare/hw1.png",

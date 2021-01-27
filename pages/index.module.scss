@@ -1,3 +1,6 @@
+@use '_globals.scss';
+@import "_globals.scss";
+
 .indexContainer {
   overflow-x: hidden;
   margin: auto;
@@ -81,7 +84,8 @@ font-family: 'Major Mono Display', monospace;
   min-width: 8vw;
   min-height: 8vw;
   background: red;
-  background: linear-gradient(0deg, rgba(180,125,179,1) 0%, rgba(71,71,138,1) 48%, rgba(94,128,166,1) 100%);
+  @include linear-gradient-background(rgb(180,125,179),
+  (0deg, rgba(180,125,179,1) 0%, rgba(71,71,138,1) 48%, rgba(94,128,166,1) 100%));
   border-radius: 50%;
   align-self: flex-start;
 }
@@ -91,8 +95,8 @@ font-family: 'Major Mono Display', monospace;
     min-width: 9vw;
     height: 7.5vw;
     align-self: center;
-    background: rgb(193,139,192);
-    background: linear-gradient(0deg, rgba(193,139,192,1) 0%, rgba(91,110,131,1) 52%, rgba(132,168,163,1) 100%);
+    @include linear-gradient-background(rgb(193,139,192),
+    (0deg, rgba(193,139,192,1) 0%, rgba(91,110,131,1) 52%, rgba(132,168,163,1) 100%));
     clip-path: polygon(0% 0, 0% 230%, 100% 0);
     -webkit-clip-path: polygon(0% 0, 0% 230%, 100% 0);
 }
@@ -103,7 +107,8 @@ font-family: 'Major Mono Display', monospace;
   height: 8vw;
   align-self: center;
   background: rgb(110,174,175);
-  background: linear-gradient(180deg, rgba(110,174,175,1) 0%, rgba(162,128,163,1) 63%, rgba(104,105,133,1) 98%);
+  @include linear-gradient-background(rgb(110,174,175),
+  (180deg, rgba(110,174,175,1) 0%, rgba(162,128,163,1) 63%, rgba(104,105,133,1) 98%));
   clip-path: polygon(50% 0, 0 100%, 100% 100%);
   -webkit-clip-path: polygon(50% 0, 0 100%, 100% 100%);
 }
@@ -140,8 +145,8 @@ font-family: 'Major Mono Display', monospace;
 .topBar {
   position: relative;
   height: 30px;
-  background: rgb(2,0,36);
-  background: linear-gradient(112deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(58,129,143,1) 100%);
+  @include linear-gradient-background(rgb(2,0,36),
+  (112deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(58,129,143,1) 100%));
   border-top: solid 1px white;
   border-left: solid 1px white;
   border-right: solid 1px #2B2B48;
@@ -153,11 +158,8 @@ font-family: 'Major Mono Display', monospace;
 }
 
 .bioExit {
+  @extend %full-box-border;
   outline: none;
-  border-left: solid 1px white;
-  border-top: solid 1px white;
-  border-right: solid 1px black;
-  border-bottom: solid 1px black;
   padding: 0px;
   height: 20px;
   width: 22px;
@@ -167,14 +169,10 @@ font-family: 'Major Mono Display', monospace;
 }
 
 .bioText {
+  @extend %box-border;
   font-family: 'Anonymous Pro', monospace;
   color: black;
   padding: 12px 20px;
-  background: #bdbdca;
-  border-left: solid 1px white;
-  border-right: solid 1px #2B2B48;
-  border-bottom: solid 2px #2B2B48;
-  box-shadow: 4px 4px #5f6d6d;
   line-height: 1.2em;
 }
 
@@ -229,39 +227,39 @@ font-family: 'Major Mono Display', monospace;
   margin: auto;
   width: 70vw;
   font-family: 'IBM Plex Mono', monospace;
-}
 
-.resumeHead {
-  font-size: 20px;
-  text-align: center;
-  margin-bottom: 12px;
-}
+  .resumeHead {
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 12px;
+  }
 
-.resumePoint {
-  margin-bottom: 10px;
-}
+  .resumePoint {
+    margin-bottom: 10px;
+  }
 
-.resumeDate {
-  color: darkgrey;
-  font-size: 12px;
-}
+  .resumeDate {
+    color: darkgrey;
+    font-size: 12px;
+  }
 
-.resumeTitle {
-  font-size: 14px;
-  color: #a9b6de;
-}
+  .resumeTitle {
+    font-size: 14px;
+    color: #a9b6de;
+  }
 
-.resumeDesc {
-  margin-top: 3px;
-  font-family: 'Josefin Sans', sans-serif;
-}
+  .resumeDesc {
+    margin-top: 3px;
+    font-family: 'Josefin Sans', sans-serif;
+  }
 
-.resume a {
-  color: #9beeef;
-}
+  a {
+    color: #9beeef;
+  }
 
-.resume a:hover {
-  color: #32fdff;
+  a:hover {
+    color: #32fdff;
+  }
 }
 
 @media(max-width: 640px) {

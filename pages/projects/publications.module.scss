@@ -1,3 +1,6 @@
+@use '../_globals.scss';
+@import "../_globals.scss";
+
 .publicationsContainer {
   background: #757996;
   font-family: 'IBM Plex Mono', monospace;
@@ -19,20 +22,9 @@
 }
 
 .select {
-  font-family: 'IBM Plex Mono', monospace;
-  letter-spacing: 1.5px;
-  background-color: transparent;
-  border: solid 1px white;
-  color: white;
-  padding: 2px 6px;
-  font-size: 12px;
-  outline: none;
+  @extend %dropdown;
+  width: 200px;
 }
-
-.select:hover {
-  cursor: pointer;
-}
-
 .arrow {
   z-index: 4;
   color: white;
@@ -89,6 +81,7 @@
 }
 
 .card__face__front {
+  width: 100%;
 }
 
 .card__face__back {
@@ -119,6 +112,7 @@
 }
 
 .content {
+  width: 100%;
 }
 
 

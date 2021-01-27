@@ -3,7 +3,7 @@ import GenericLink from '../../components/GenericLink.js'
 import Navigation from '../../components/Navigation.js'
 import Head from 'next/head'
 
-import styles from './publications.module.css'
+import styles from './publications.module.scss'
 
 const pages = [
     { color: '#ce83af', img:"https://res.cloudinary.com/dftvewldz/image/upload/c_scale,w_450/v1538425968/collages/digital/c11.jpg", text: "hewwo pg 1"},
