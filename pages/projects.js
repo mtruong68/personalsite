@@ -40,7 +40,7 @@ const allProjects = [{
     desc: "VR Games created for the Institute of Creative Technology for physical therapy resesarch. Uses hand tracking to track how patients practice various arm motions.",
     image: "https://res.cloudinary.com/dftvewldz/image/upload//c_scale,w_667/v1609780336/games/make-it-neat-preview.gif",
     smallImage: "https://res.cloudinary.com/dftvewldz/image/upload/c_scale,h_25/v1609780336/games/make-it-neat-preview.gif",
-    tags: ["code", "research", "game"],
+    tags: ["code", "research", "game", "vr/ar"],
     mary: '2',
     link: {internal: false, href:"https://www.youtube.com/watch?v=Dvz5tDsmNiM&feature=youtu.be"}
   },{
@@ -61,6 +61,24 @@ const allProjects = [{
     tags: ["freelance", "games", "code"],
     mary: '2',
     link: {internal: false, href:"https://studyhall.xyz/off-the-record/"}
+  },{
+    name: "Building Hyperlink",
+    year: "2021",
+    desc: "Web-based video work by HK artist Gaybird, coded by me under Pill & Pillow.",
+    image: "https://res.cloudinary.com/dftvewldz/image/upload/v1628776787/previews/hyperlin.gif",
+    smallImage: "https://res.cloudinary.com/dftvewldz/image/upload/v1628776787/previews/hyperlin.gif",
+    tags: ["freelance", "code", "art"],
+    mary: '1',
+    link: {internal: false, href:"https://buildinghyperlink.com/"}
+  },{
+    name: "IFC Mall Mother's Day Minisite",
+    year: "2021",
+    desc: "Minisite for Mother's Day deals at Hong Kong's IFC Mall.",
+    image: "https://res.cloudinary.com/dftvewldz/image/upload/c_scale,w_667/v1628776834/previews/ifc-mothers-day.png",
+    smallImage: "https://res.cloudinary.com/dftvewldz/image/upload/c_scale,h_25/v1628776834/previews/ifc-mothers-day.png",
+    tags: ["freelance", "code"],
+    mary: '3',
+    link: {internal: false, href:"https://ifc.com.hk/tc/mall/"}
   },{
     name: "Vaporsquare",
     year: "2018",
